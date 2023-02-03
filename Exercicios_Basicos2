@@ -1,0 +1,74 @@
+-> tendo uma matriz 5×5 preenchida com valores aleatórios entre 0 e 99, mostre qual é o segundo maior valor existente na matriz.
+
+import random
+tam = 5
+
+mat = [0]*tam
+for i in range(tam):
+    mat[i] = [0]*tam
+print mat
+
+for i in range(tam):
+    for j in range(tam):
+        mat[i][j] = random.randint(0, 99)
+print mat
+
+maior = mat[0][0]
+for i in range(tam):
+    for j in range(tam):
+        if mat[i][j] > maior:
+            maior = mat[i][j]
+print maior
+
+segundomaior = 0
+for i in range(tam):
+    for j in range(tam):
+        if mat[i][j] > segundomaior and mat[i][j] != maior:
+            segundomaior = mat[i][j]
+print segundomaio
+
+
+
+-> crie um algoritmo que leia um valor e a partir disso faça: (1) se o valor for 1, 2 ou 3, mostre o valor elevado ao quadrado; (2) se o valor for o número 4 ou 9, mostre a raiz quadrada do número; (3) se for os valores 6, 7 e 8, mostre o valor dividido 9.
+
+import math
+
+num = input('Digite um valor: ')
+if num >= 1 and num <= 3:
+    print num**2
+elif num == 4 or num == 9:
+    print math.sqrt(num)
+elif num == 6 or num == 7 or num == 8:
+    print num/9.0
+    
+    
+->  crie um algoritmo que leia um valor e a partir disso faça: (1) se for um valor negativo, mostre o módulo (valor sem sinal) do valor; (2) se for um valor maior do que 10, solicite outro valor e mostre a diferença entre eles; (3) Caso o valor não seja de nenhuma condição anterior, mostre o valor dividido por 5.
+
+num = input('Digite um valor: ')
+if num < 0:
+    print num * -1
+elif num > 10:
+    num2 = input('Digite outro valor: ')
+    print num - num2
+else:
+    print num/5.0
+    
+    
+    
+ -> crie um algoritmo que leia um valor e a partir disso faça: (1) se o valor for 1 e 2, mostre o valor elevado ao cubo; (2) se o valor for múltiplo de 3 mostre o fatorial desse número; (3) se o valor for os valores 4, 5, 7 ou 8, mostre o valor dividido 9. Caso não seja nenhum dos valores, informe como “valor inválido”.
+
+import math
+num = input('Digite um valor: ')
+if num == 1 or num == 2:
+    print num**3
+elif num%3 == 0:
+    print math.factorial(num)
+elif num == 4 or num == 5 or num ==7 or num == 8:
+    print num/9.0
+else:
+    print 'Valor inválido'
+    
+    
+    
+   
+  ->  
